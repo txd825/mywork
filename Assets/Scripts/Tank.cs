@@ -11,12 +11,12 @@ public class Tank : MonoBehaviour
     void Awake()
     {
         _mouseLook.Init(Turret.transform, Turret.MouseLookTra);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
 	void Update () {
 
         _mouseLook.LookRotation(Turret.transform, Turret.MouseLookTra);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
 	}
 }
